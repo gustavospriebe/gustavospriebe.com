@@ -1,9 +1,9 @@
 {
-  "name": "gustavospriebe.com",
+  "name": "gustavospriebe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gustavospriebe.com/a",
+  "homepage": "https://gustavospriebe.com",
   
   "scripts": {
     "dev": "vite",
