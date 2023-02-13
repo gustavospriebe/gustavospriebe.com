@@ -53,3 +53,7 @@
     color: #f3f4f6;
     border-color:none;
 }
+
+.hero-links {
+    display: flex;
+}
