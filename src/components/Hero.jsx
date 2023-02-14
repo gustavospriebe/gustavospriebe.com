@@ -1,5 +1,4 @@
 import styles from "./Hero.css";
-import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import dribble from "../assets/dribble.svg";
