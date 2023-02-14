@@ -19,3 +19,7 @@ textarea {
     margin: 0;
     background: none;
 }
+
+.App {
+    height: 100vh;
+}
