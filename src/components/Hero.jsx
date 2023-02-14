@@ -10,7 +10,7 @@ function Hero({language}) {
             <div className="hero-img"></div>
             <div className="hero-info">
                 <h1>GUSTAVO PRIEBE</h1>
-                <h3>FRONT END DEVELOPER</h3>
+                <h3>{language === 'en' ? 'FRONT END DEVELOPER': 'DESENVOLVEDOR FRONT END'}</h3>
                 <div className="hero-nav">
                     <button className="contact">{language === 'en' ? 'Contact me': 'Contato'}</button>
                     <div className="hero-links">
