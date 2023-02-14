@@ -3,16 +3,36 @@ import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import dribble from "../assets/dribble.svg";
+import { Button } from "flowbite-react";
+import { useState } from "react";
+import ModalEnglish from "./ModalEnglish";
+import ModalPortuguese from "./ModalPortugues";
 
-function Hero({language}) {
+function Hero({ language }) {
+    const [modal, setModal] = useState(false);
+
     return (
         <div className="hero">
             <div className="hero-img"></div>
             <div className="hero-info">
                 <h1>GUSTAVO PRIEBE</h1>
-                <h3>{language === 'en' ? 'FRONT END DEVELOPER': 'DESENVOLVEDOR FRONT END'}</h3>
+                <h3>
+                    {language === "en"
+                        ? "FRONT END DEVELOPER"
+                        : "DESENVOLVEDOR FRONT END"}
+                </h3>
                 <div className="hero-nav">
-                    <button className="contact">{language === 'en' ? 'Contact me': 'Contato'}</button>
+                    <Button
+                        onClick={() => setModal(!modal)}
+                        className="contact bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md"
+                    >
+                        {language === "en" ? "Contact me" : "Contato"}
+                    </Button>
+                    {language === "en" ? (
+                        <ModalEnglish modal={modal} setModal={setModal} />
+                    ) : (
+                        <ModalPortuguese modal={modal} setModal={setModal} />
+                    )}
                     <div className="hero-links">
                         <a
                             href="https://www.linkedin.com/in/gustavospriebe/"

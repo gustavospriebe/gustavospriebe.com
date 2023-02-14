@@ -42,7 +42,7 @@
     font-weight: 800;
     font-size: 18px;
     line-height: 150%;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .contact:hover {
@@ -63,7 +63,6 @@
 
 .hero-links > a {
     padding-left: 25px;
-    width: 34px;
 }
 
 @media (max-width: 1440px) {
@@ -80,7 +79,7 @@
         min-height: 50vh;
     }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .hero {
         display: block;
     }
