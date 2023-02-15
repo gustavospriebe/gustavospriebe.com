@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import { useState } from "react";
 
 function App() {
-    const [language, setLanguage] = useState("en");
+    const [language, setLanguage] = useState("pt-br");
 
     return (
         <div className="App">
