@@ -32,7 +32,7 @@
     line-height: 36px;
     margin: 20px 0 30px;
 }
-
+/* 
 .contact {
     padding: 10px 20px;
     border: 2px solid rgba(104, 117, 245, 1);
@@ -50,7 +50,7 @@
     cursor: pointer;
     color: #f3f4f6;
     border-color: none;
-}
+} */
 
 .hero-nav {
     display: flex;
