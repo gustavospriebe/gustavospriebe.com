@@ -24,7 +24,7 @@ function Hero({ language }) {
                     <Button
                         onClick={() => setModal(!modal)}
                         // className="contact"
-                        class="text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
+                        class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
                         "
                     >
                         {language === "en" ? "Contact me" : "Contato"}

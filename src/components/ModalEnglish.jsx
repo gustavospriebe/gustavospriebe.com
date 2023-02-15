@@ -9,8 +9,8 @@ export default function ModalEnglish({ modal, setModal }) {
             onClose={() => setModal(!modal)}
             className="bg-gray-600"
         >
-            <Modal.Header class="bg-gray-800" />
-            <Modal.Body class="bg-gray-800">
+            <Modal.Header className="bg-gray-800" />
+            <Modal.Body className="bg-gray-800">
                 <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
                     <h3 className="text-xl font-medium text-white">
                         Submite a message
@@ -62,7 +62,7 @@ export default function ModalEnglish({ modal, setModal }) {
                     </div>
                     <div className="w-full">
                         <Button
-                            class="text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
+                            class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
                         "
                         >
                             Submit your message
