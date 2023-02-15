@@ -25,5 +25,10 @@
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
     "vite": "^4.1.0"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "PUBLIC_KEY", "VITE_SERVICE_KEY", "VITE_TEMPLATE_KEY"
+    ]
   }
 }
