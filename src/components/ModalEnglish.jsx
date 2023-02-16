@@ -10,8 +10,6 @@ export default function ModalEnglish({ modal, setModal }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        console.log(form.current);
-
         emailjs
             .sendForm(
                 import.meta.env.VITE_SERVICE_KEY,
