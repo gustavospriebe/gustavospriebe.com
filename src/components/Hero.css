@@ -152,6 +152,16 @@
         min-width: 30vh;
         min-height: 30vh;
     }
+
+    .hero-info > h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-info > h1 {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 1440px) {

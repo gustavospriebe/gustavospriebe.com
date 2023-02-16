@@ -21,6 +21,7 @@ export default function ModalEnglish({ modal, setModal }) {
                 (result) => {
                     console.log(result.text);
                     setToast("send");
+                    form.current.reset();
                 },
                 (error) => {
                     console.log(error.text);
@@ -34,7 +35,11 @@ export default function ModalEnglish({ modal, setModal }) {
             show={modal}
             size="md"
             popup={true}
-            onClose={() => setModal(!modal)}
+            onClose={() => {
+                setModal(!modal);
+                form.current.reset();
+                setToast("none");
+            }}
             className="bg-gray-600"
         >
             <Modal.Header className="bg-gray-800" />
