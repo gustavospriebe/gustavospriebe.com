@@ -9,6 +9,7 @@ export default function ModalEnglish({ modal, setModal }) {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setToast("none");
 
         emailjs
             .sendForm(
