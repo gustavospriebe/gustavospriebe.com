@@ -36,6 +36,7 @@ export default function ModalEnglish({ modal, setModal }) {
             show={modal}
             size="md"
             popup={true}
+            dismissible={true}
             onClose={() => {
                 setModal(!modal);
                 form.current.reset();
