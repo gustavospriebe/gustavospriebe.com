@@ -40,6 +40,11 @@ header {
 
 .languages > li {
     cursor: pointer;
+    transition: filter 0.25s;
+}
+
+.languages > li:hover {
+    filter: brightness(0.85);
 }
 
 .languages > .active {

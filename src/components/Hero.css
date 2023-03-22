@@ -63,6 +63,12 @@
 
 .hero-links > a {
     padding-left: 25px;
+
+    transition: filter 0.25s;
+}
+
+.hero-links > a:hover {
+    filter:brightness(0.85)
 }
 
 @media (max-width: 1440px) {
