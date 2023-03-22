@@ -1,5 +1,5 @@
 import logo from "../assets/logosvg.svg";
-import styles from "./Header.css";
+import "./Header.css";
 
 function Header({language, setLanguage}) {
 
