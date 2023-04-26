@@ -1,4 +1,4 @@
-import "./Hero.css";
+import styles from "./Hero.module.css";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import dribble from "../assets/dribble.svg";
@@ -11,16 +11,22 @@ function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="hero">
-            <div className="hero-img"></div>
-            <div className="hero-info">
-                <h1>GUSTAVO PRIEBE</h1>
+        <div className={styles.hero}>
+            <div className={styles.heroImg}></div>
+            <div className={styles.heroInfo}>
+                <h1>Gustavo Priebe</h1>
                 <h3>
                     {language === "en"
-                        ? "FRONT END DEVELOPER"
-                        : "DESENVOLVEDOR FRONT END"}
+                        ? "Front End Developer"
+                        : "Desenvolvedor Front End"}
                 </h3>
-                <div className="hero-nav">
+
+                {/* <h4>
+                    {language === "en"
+                        ? "I'm a experienced "
+                        : "Desenvolvedor"}
+                </h4> */}
+                <div className={styles.heroNav}>
                     <Button
                         onClick={() => setModal(!modal)}
                         // className="contact"
@@ -34,7 +40,7 @@ function Hero({ language }) {
                     ) : (
                         <ModalPortuguese modal={modal} setModal={setModal} />
                     )}
-                    <div className="hero-links">
+                    <div className={styles.heroLinks}>
                         <a
                             href="https://www.linkedin.com/in/gustavospriebe/"
                             target="_blank"

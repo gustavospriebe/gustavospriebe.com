@@ -1,4 +1,4 @@
-import "./App.css";
+import "./global.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { useState } from "react";

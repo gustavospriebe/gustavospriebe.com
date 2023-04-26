@@ -1,27 +1,30 @@
 import logo from "../assets/logosvg.svg";
-import "./Header.css";
+import styles from "./Header.module.css";
 
-function Header({language, setLanguage}) {
-
+function Header({ language, setLanguage }) {
     console.log(language);
     return (
-        <header>
-            <img src={logo} alt="logo" className="logo" />
+        <header className={styles.header}>
+            <img src={logo} alt="logo" className={styles.logo} />
             {/* <ul className="links">
                 <li>Bio</li>
                 <li>Projects</li>
                 <li>Contact</li>
             </ul> */}
-            <ul className="languages">
+            <ul className={styles.languages}>
                 <li
-                    className={language === "en" ? "active" : "inactive"}
+                    className={
+                        language === "en" ? styles.active : styles.inactive
+                    }
                     onClick={() => setLanguage("en")}
                 >
                     ENG
                 </li>
-                <div className="separator"></div>
+                <div className={styles.separator}></div>
                 <li
-                    className={language === "en" ? "inactive" : "active"}
+                    className={
+                        language === "en" ? styles.inactive : styles.active
+                    }
                     onClick={() => setLanguage("pt-br")}
                 >
                     PT-BR

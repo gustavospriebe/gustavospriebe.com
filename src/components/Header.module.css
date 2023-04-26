@@ -1,12 +1,4 @@
-:root {
-    --language-active: rgba(104, 117, 245, 1);
-    --language-inactive: rgba(180, 198, 252, 1);
-    --separator: rgba(55, 65, 81, 1);
-    --link-active: rgba(229, 231, 235, 1);
-    --link-inactive: rgba(156, 163, 175, 1);
-}
-
-header {
+.header {
     display: flex;
     width: 83%;
     margin: 0 auto 100px;
@@ -65,5 +57,11 @@ header {
 @media (max-width: 1023px) {
     header {
         margin: 0 auto 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    .links {
+        display: none;
     }
 }
