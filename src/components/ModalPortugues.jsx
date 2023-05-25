@@ -1,6 +1,6 @@
-import { Button, Modal, Label, TextInput } from "flowbite-react";
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Button, Label, Modal, TextInput } from "flowbite-react";
+import { useRef, useState } from "react";
 
 export default function ModalEnglish({ modal, setModal }) {
     const [toast, setToast] = useState("none");
@@ -45,7 +45,7 @@ export default function ModalEnglish({ modal, setModal }) {
             className="bg-gray-600"
         >
             <Modal.Header className="bg-gray-800" />
-            <Modal.Body className="bg-gray-800">
+            <Modal.Body className="bg-gray-800 rounded-b-sm">
                 <form
                     onSubmit={sendEmail}
                     ref={form}

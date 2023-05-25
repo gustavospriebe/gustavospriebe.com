@@ -1,6 +1,6 @@
-import { Button, Modal, Label, TextInput } from "flowbite-react";
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Button, Label, Modal, TextInput } from "flowbite-react";
+import { useRef, useState } from "react";
 
 export default function ModalEnglish({ modal, setModal }) {
     const [toast, setToast] = useState("none");

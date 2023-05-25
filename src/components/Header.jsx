@@ -4,13 +4,16 @@ import styles from "./Header.module.css";
 function Header({ language, setLanguage }) {
     console.log(language);
     return (
-        <header className={styles.header}>
+        <header className="mx-auto mb-28 flex w-3/4 items-center justify-between pt-7  ">
             <img src={logo} alt="logo" className={styles.logo} />
-            {/* <ul className="links">
-                <li>Bio</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul> */}
+            <ul className={styles.links}>
+                <li>
+                    <a href="">Bio</a>
+                </li>
+                <li>
+                    <a href="">Projects</a>
+                </li>
+            </ul>
             <ul className={styles.languages}>
                 <li
                     className={

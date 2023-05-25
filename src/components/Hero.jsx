@@ -1,9 +1,9 @@
-import styles from "./Hero.module.css";
-import linkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
-import dribble from "../assets/dribble.svg";
 import { Button } from "flowbite-react";
 import { useState } from "react";
+import dribble from "../assets/dribble.svg";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
+import styles from "./Hero.module.css";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 

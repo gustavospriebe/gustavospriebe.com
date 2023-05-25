@@ -11,26 +11,7 @@
     --link-inactive: rgba(156, 163, 175, 1);
 }
 
-body {
-    background-color: rgba(31, 42, 55, 1);
-    height: 100vh;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
 
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-    background: none;
-}
 
-.App {
-    height: 100vh;
-}
+
+
