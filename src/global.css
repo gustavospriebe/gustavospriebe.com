@@ -11,7 +11,19 @@
     --link-inactive: rgba(156, 163, 175, 1);
 }
 
+@layer base {
+    .language-active {
+        @apply cursor-pointer text-language-active transition-all hover:brightness-90;
+    }
 
+    .language-inactive {
+        @apply cursor-pointer text-language-inactive transition-all hover:brightness-90;
+    }
 
-
-
+    .separator {
+        width: 20px;
+        height: 0px;
+        border: 1px solid var(--separator);
+        transform: rotate(90deg);
+    }
+}
