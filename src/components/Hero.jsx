@@ -6,25 +6,6 @@ import linkedin from "../assets/linkedin.svg";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 
-// Animation Hero
-// .heroImg {
-//     box-shadow: 0px 9px 25px 4px rgba(141, 141, 141, 0.25);
-//     /* box-shadow: inset 0 0 0 9px rgb(141, 141, 141, 0.25); */
-//     animation: profile__animate 8s ease-in-out infinite 1s;
-// }
-
-// @keyframes profile__animate {
-//     0% {
-//         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-//     }
-//     50% {
-//         border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-//     }
-//     100% {
-//         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-//     }
-// }
-
 function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
