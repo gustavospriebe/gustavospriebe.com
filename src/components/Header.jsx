@@ -9,12 +9,12 @@ function Header({ language, setLanguage }) {
             <img src={logo} alt="logo" className="h-8 w-20" />
             {/* <ul className="hidden gap-8 md:flex">
                 {links.map((l) => (
-                    <li className="text-link-inactive hover:brightness-90">
+                    <li className="text-link-inactive hover-brightness">
                         <a href="">{l}</a>
                     </li>
                 ))}
             </ul> */}
-            <ul className="flex items-center justify-center gap-2 text-sm sm:gap-4 sm:text-base ">
+            <ul className="flex items-center justify-center gap-2 text-sm lg:gap-4 ">
                 <li
                     className={
                         language === "en"

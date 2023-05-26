@@ -1,15 +1,19 @@
 import emailjs from "@emailjs/browser";
-import { Button, Label, Modal, TextInput } from "flowbite-react";
+import { Label, Modal, TextInput, Alert } from "flowbite-react";
 import { useRef, useState } from "react";
 
 export default function ModalEnglish({ modal, setModal }) {
     const [toast, setToast] = useState("none");
+    const [loading, setLoading] = useState(false);
 
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
         setToast("none");
+
+        setLoading(true);
+        
 
         emailjs
             .sendForm(
@@ -23,10 +27,12 @@ export default function ModalEnglish({ modal, setModal }) {
                     console.log(result.text);
                     setToast("send");
                     form.current.reset();
+                    setLoading(false);
                 },
                 (error) => {
                     console.log(error.text);
                     setToast("error");
+                    setLoading(false);
                 }
             );
     };
@@ -42,131 +48,85 @@ export default function ModalEnglish({ modal, setModal }) {
                 form.current.reset();
                 setToast("none");
             }}
-            className="bg-gray-600"
+            className="min-h-screen bg-gray-600"
         >
+            
             <Modal.Header className="bg-gray-800" />
-            <Modal.Body className="bg-gray-800 rounded-b-sm">
+            <Modal.Body className="bg-gray-800 font-inter">
                 <form
                     onSubmit={sendEmail}
                     ref={form}
-                    className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8"
+                    className="space-y-4 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-4"
                 >
-                    <h3 className="text-xl font-medium text-white">
+                    <h3 className="text-xl font-semibold text-whiter ">
                         Envie uma mensagem
                     </h3>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label
-                                htmlFor="user_name"
-                                value="Nome"
-                                class="text-md text-white"
-                            />
-                        </div>
-                        <TextInput
-                            id="user_name"
-                            name="user_name"
-                            required={true}
-                            placeholder="Insira seu nome"
+                    <div className="mb-2 block">
+                        <Label
+                            htmlFor="user_name"
+                            value="Nome"
+                            class="text-md text-whiter"
                         />
                     </div>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label
-                                htmlFor="user_email"
-                                value="Your Email"
-                                class="text-md text-white"
-                            />
-                        </div>
-                        <TextInput
-                            id="user_email"
-                            name="user_email"
-                            type="email"
-                            required={true}
-                            placeholder="Insira seu email"
+                    <TextInput
+                        id="user_name"
+                        name="user_name"
+                        required={true}
+                        placeholder="Insira seu nome"
+                    />
+                    <div className="mb-2 block">
+                        <Label
+                            htmlFor="user_email"
+                            value="Email"
+                            class="text-md text-whiter"
                         />
                     </div>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label
-                                htmlFor="email"
-                                value="Your Message"
-                                class="text-md text-white"
-                            >
-                                Mensagem
-                            </Label>
-                        </div>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="4"
-                            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
-                            placeholder="Escreva sua mensagem"
-                            required={true}
-                        ></textarea>
+                    <TextInput
+                        id="user_email"
+                        name="user_email"
+                        type="email"
+                        required={true}
+                        placeholder="Insira seu email"
+                    />
+                    <div className="mb-2 block">
+                        <Label
+                            htmlFor="email"
+                            value="Mensagem"
+                            class="text-md text-whiter"
+                        />
                     </div>
-                    <div className="w-full">
-                        <Button
-                            class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
-                        "
-                            type="submit"
-                        >
-                            Envie sua mensagem
-                        </Button>
-                    </div>
-                </form>
-            </Modal.Body>
-            {toast === "send" && (
-                <Modal
-                    show={modal}
-                    size="md"
-                    popup={true}
-                    className="bg-gray-600"
-                >
-                    <Modal.Body className=" rounded bg-gray-800 flex flex-col justify-center items-center">
-                        <h4 className="py-5 px-3 text-white text-md">
-                            Mensagem enviada com sucesso.
-                        </h4>
-                        <Button
-                            class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
-                        "
-                            type="submit"
-                            onClick={() => {
-                                setModal(!modal);
-                                form.current.reset();
-                                setToast("none");
-                            }}
-                        >
-                            Ok
-                        </Button>
-                    </Modal.Body>
-                </Modal>
-            )}
-            {toast === "error" && (
-                <div
-                    id="toast-simple"
-                    class="flex items-center mt-0.5 w-full p-4 space-x-4 bg-gray-800 text-white divide-x divide-gray-200 shadow"
-                    role="alert"
-                >
-                    <svg
-                        aria-hidden="true"
-                        class="w-5 h-5 text-indigo-700 "
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="paper-plane"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 "
+                        placeholder="Escreva sua mensagem"
+                        required={true}
+                    ></textarea>
+                    <button
+                        className="block h-12 w-full rounded-lg bg-header3 font-semibold text-whiter transition hover:border-header3 hover:bg-transparent hover:text-header3 hover:outline"
+                        type="submit"
                     >
-                        <path
-                            fill="currentColor"
-                            d="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z"
-                        ></path>
-                    </svg>
-                    <div class="pl-4 text-sm font-normal">
-                        Mensagem não enviada, tente novamente.
-                    </div>
-                </div>
-            )}
+                        Envie sua mensagem
+                    </button>
+                </form>
+            </Modal.Body>      
+            {toast === 'send' && <Alert color="success" rounded>
+                    <p>
+                        <span className="font-medium">
+                            Sucesso! {' '}
+                        </span>
+                        Sua mensagem foi enviada.
+                    </p>
+            </Alert>}
+            {toast === 'error' && <Alert color="failure" rounded>
+                    <p>
+                        <span className="font-medium">
+                            Sucesso! {' '}
+                        </span>
+                        Sua mensagem foi enviada.
+                    </p>
+            </Alert>}
         </Modal>
     );
 }

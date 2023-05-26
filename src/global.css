@@ -13,11 +13,15 @@
 
 @layer base {
     .language-active {
-        @apply cursor-pointer text-language-active transition-all hover:brightness-90;
+        @apply hover-brightness cursor-pointer text-language-active;
     }
 
     .language-inactive {
-        @apply cursor-pointer text-language-inactive transition-all hover:brightness-90;
+        @apply hover-brightness cursor-pointer text-language-inactive;
+    }
+
+    .hover-brightness {
+        @apply transition-all hover:brightness-75;
     }
 
     .separator {
@@ -44,3 +48,9 @@
         }
     }
 }
+
+
+
+
+
+
