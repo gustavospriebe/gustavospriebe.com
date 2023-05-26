@@ -35,7 +35,7 @@ function Hero({ language }) {
                 <div className="flex w-full flex-col items-center lg:flex-row lg:gap-10">
                     <button
                         onClick={() => setModal(!modal)}
-                        className="mb-6 h-12 w-52 rounded-lg bg-header3 font-semibold text-whiter transition hover:border-header3 hover:bg-transparent hover:text-header3 hover:outline sm:text-lg lg:mb-0"
+                        className="button sm:text-lg"
                     >
                         {language === "en" ? "Contact me" : "Contato"}
                     </button>

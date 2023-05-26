@@ -47,10 +47,8 @@
             border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
         }
     }
+
+    .button {
+        @apply mb-6 h-12 w-52 rounded-lg bg-header3 font-semibold text-whiter transition hover:border-header3 hover:bg-transparent hover:text-header3 hover:outline  lg:mb-0;
+    }
 }
-
-
-
-
-
-
