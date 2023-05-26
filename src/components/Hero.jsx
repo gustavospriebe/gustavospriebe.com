@@ -6,18 +6,34 @@ import linkedin from "../assets/linkedin.svg";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 
+// Animation Hero
+// .heroImg {
+//     box-shadow: 0px 9px 25px 4px rgba(141, 141, 141, 0.25);
+//     /* box-shadow: inset 0 0 0 9px rgb(141, 141, 141, 0.25); */
+//     animation: profile__animate 8s ease-in-out infinite 1s;
+// }
+
+// @keyframes profile__animate {
+//     0% {
+//         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+//     }
+//     50% {
+//         border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+//     }
+//     100% {
+//         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+//     }
+// }
+
 function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div
-            className="flex flex-col items-center justify-center lg:flex-row lg:gap-20 lg:p-12 xl:gap-40 2xl:gap-60 
-        "
-        >
+        <div className="xl:pt-22 xl:gap-30 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-16 2xl:gap-60 2xl:pt-24">
             <img
                 src={hero}
                 alt="hero"
-                className="mb-[60px] h-64 w-64 rounded-full object-cover sm:mb-[90px] sm:h-127 sm:w-127 lg:mb-0"
+                className="hero-animation mb-[60px] h-64 w-64 rounded-full object-cover sm:mb-[90px] sm:h-95 sm:w-95 lg:mb-0 lg:h-127 lg:w-127"
             />
             <div className="flex flex-col items-center">
                 <h1 className="mb-6 text-center text-4xl font-extrabold text-whiter sm:text-6xl  lg:text-left ">
@@ -34,7 +50,7 @@ function Hero({ language }) {
                         ? "I'm a experienced "
                         : "Desenvolvedor"}
                 </h4> */}
-                <div className="flex w-full flex-col items-center gap-10 lg:flex-row">
+                <div className="flex w-full flex-col items-center lg:flex-row lg:gap-10">
                     <button
                         onClick={() => setModal(!modal)}
                         className="mb-6 h-12 w-52 rounded-lg bg-indigo-500 text-whiter hover:border-indigo-500 hover:bg-transparent hover:text-indigo-500 hover:outline sm:text-lg lg:mb-0"
