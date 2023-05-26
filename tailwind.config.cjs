@@ -20,10 +20,10 @@ module.exports = {
                 inter: "Inter",
             },
             width: {
-                127: "31.75rem",
+                127: "30rem",
             },
             height: {
-                127: "31.75rem",
+                127: "30rem",
             },
         },
     },
