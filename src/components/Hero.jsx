@@ -2,21 +2,27 @@ import { Button } from "flowbite-react";
 import { useState } from "react";
 import dribble from "../assets/dribble.svg";
 import github from "../assets/github.svg";
+import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
 import styles from "./Hero.module.css";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
-import hero from "../assets/hero.jpg";
 
 function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="flex items-center justify-between px-32">
-            <img src={hero} alt="hero" className="h-64 w-64 object-cover sm:w-127 sm:h-127" />
-            <div className={styles.heroInfo}>
-                <h1>Gustavo Priebe</h1>
-                <h3>
+        <div className=" flex flex-col items-center justify-between lg:flex-row lg:p-12 ">
+            <img
+                src={hero}
+                alt="hero"
+                className="mb-[60px] h-64 w-64 rounded-full object-cover sm:mb-[90px] sm:h-127 sm:w-127 lg:mb-0"
+            />
+            <div className="flex flex-col items-center">
+                <h1 className="mb-6 text-center text-4xl font-extrabold text-whiter">
+                    Gustavo Priebe
+                </h1>
+                <h3 className="mb-6 text-center text-2xl font-bold text-header3">
                     {language === "en"
                         ? "Front End Developer"
                         : "Desenvolvedor Front End"}
@@ -27,15 +33,16 @@ function Hero({ language }) {
                         ? "I'm a experienced "
                         : "Desenvolvedor"}
                 </h4> */}
-                <div className={styles.heroNav}>
-                    <Button
+                <div className="flex flex-col lg:flex-row">
+                    <button
                         onClick={() => setModal(!modal)}
-                        // className="contact"
-                        class="hover:text-md rounded bg-indigo-700 py-1 px-3 text-white hover:border-indigo-700 hover:bg-transparent hover:text-indigo-700 hover:outline
+                        className="h-12 w-52 rounded-lg bg-indigo-500 text-whiter hover:border-indigo-500 hover:bg-transparent transition hover:text-indigo-500 hover:outline
+                    
                         "
+                        // className="w-52 rounded"
                     >
                         {language === "en" ? "Contact me" : "Contato"}
-                    </Button>
+                    </button>
                     {language === "en" ? (
                         <ModalEnglish modal={modal} setModal={setModal} />
                     ) : (
