@@ -1,27 +1,37 @@
 import logo from "../assets/logosvg.svg";
-import styles from "./Header.css";
 
-function Header({language, setLanguage}) {
+const links = ["Bio", "Projects"];
 
+function Header({ language, setLanguage }) {
     console.log(language);
     return (
-        <header>
-            <img src={logo} alt="logo" className="logo" />
-            {/* <ul className="links">
-                <li>Bio</li>
-                <li>Projects</li>
-                <li>Contact</li>
+        <header className="mx-auto flex items-center justify-between px-12 pt-6 sm:px-20 lg:px-20 xl:px-32 2xl:px-48 ">
+            <img src={logo} alt="logo" className="h-8 w-20" />
+            {/* <ul className="hidden gap-8 md:flex">
+                {links.map((l) => (
+                    <li className="text-link-inactive hover:brightness-90">
+                        <a href="">{l}</a>
+                    </li>
+                ))}
             </ul> */}
-            <ul className="languages">
+            <ul className="flex items-center justify-center gap-2 text-sm sm:gap-4 sm:text-base ">
                 <li
-                    className={language === "en" ? "active" : "inactive"}
+                    className={
+                        language === "en"
+                            ? "language-active"
+                            : "language-inactive"
+                    }
                     onClick={() => setLanguage("en")}
                 >
                     ENG
                 </li>
                 <div className="separator"></div>
                 <li
-                    className={language === "en" ? "inactive" : "active"}
+                    className={
+                        language === "en"
+                            ? "language-inactive"
+                            : "language-active"
+                    }
                     onClick={() => setLanguage("pt-br")}
                 >
                     PT-BR

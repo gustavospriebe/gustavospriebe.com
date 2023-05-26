@@ -1,9 +1,8 @@
-import styles from "./Hero.css";
-import linkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
-import dribble from "../assets/dribble.svg";
-import { Button } from "flowbite-react";
 import { useState } from "react";
+import dribble from "../assets/dribble.svg";
+import github from "../assets/github.svg";
+import hero from "../assets/hero.jpg";
+import linkedin from "../assets/linkedin.svg";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 
@@ -11,30 +10,40 @@ function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="hero">
-            <div className="hero-img"></div>
-            <div className="hero-info">
-                <h1>GUSTAVO PRIEBE</h1>
-                <h3>
+        <div className="xl:pt-22 xl:gap-30 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-16 2xl:gap-60 2xl:pt-24">
+            <img
+                src={hero}
+                alt="hero"
+                className="hero-animation mb-[60px] h-64 w-64 rounded-full object-cover sm:mb-[90px] sm:h-95 sm:w-95 lg:mb-0 lg:h-127 lg:w-127"
+            />
+            <div className="flex flex-col items-center">
+                <h1 className="mb-6 text-center text-4xl font-extrabold text-whiter sm:text-6xl  lg:text-left ">
+                    Gustavo Priebe
+                </h1>
+                <h3 className="mb-6 w-full text-center text-2xl font-bold text-header3 sm:text-3xl lg:text-left">
                     {language === "en"
-                        ? "FRONT END DEVELOPER"
-                        : "DESENVOLVEDOR FRONT END"}
+                        ? "Front End Developer"
+                        : "Desenvolvedor Front End"}
                 </h3>
-                <div className="hero-nav">
-                    <Button
+
+                {/* <h4>
+                    {language === "en"
+                        ? "I'm a experienced "
+                        : "Desenvolvedor"}
+                </h4> */}
+                <div className="flex w-full flex-col items-center lg:flex-row lg:gap-10">
+                    <button
                         onClick={() => setModal(!modal)}
-                        // className="contact"
-                        class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
-                        "
+                        className="mb-6 h-12 w-52 rounded-lg bg-indigo-500 text-whiter hover:border-indigo-500 hover:bg-transparent hover:text-indigo-500 hover:outline sm:text-lg lg:mb-0"
                     >
                         {language === "en" ? "Contact me" : "Contato"}
-                    </Button>
+                    </button>
                     {language === "en" ? (
                         <ModalEnglish modal={modal} setModal={setModal} />
                     ) : (
                         <ModalPortuguese modal={modal} setModal={setModal} />
                     )}
-                    <div className="hero-links">
+                    <div className="flex items-center justify-center gap-6">
                         <a
                             href="https://www.linkedin.com/in/gustavospriebe/"
                             target="_blank"
