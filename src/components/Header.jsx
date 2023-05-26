@@ -7,13 +7,13 @@ function Header({ language, setLanguage }) {
     return (
         <header className="mx-auto flex items-center justify-between px-12 pt-6 sm:px-20 2xl:mb-28 xl:mb-4 sm:mb-20 mb-14 lg:px-32">
             <img src={logo} alt="logo" className="h-8 w-20" />
-            <ul className="hidden gap-8 md:flex">
+            {/* <ul className="hidden gap-8 md:flex">
                 {links.map((l) => (
                     <li className="text-link-inactive hover:brightness-90">
                         <a href="">{l}</a>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
             <ul className="flex items-center justify-center gap-2 text-sm sm:gap-4 sm:text-base ">
                 <li
                     className={
