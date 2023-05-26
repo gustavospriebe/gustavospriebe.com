@@ -17,6 +17,12 @@ module.exports = {
             fontFamily: {
                 inter: "Inter",
             },
+            width: {
+                '127': '31.75rem',
+            },
+            heigth: {
+                '127': '31.75rem',
+            },
         },
     },
     plugins: [require("flowbite/plugin")],

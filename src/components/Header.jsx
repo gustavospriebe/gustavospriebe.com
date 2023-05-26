@@ -1,21 +1,20 @@
 import logo from "../assets/logosvg.svg";
-import styles from "./Header.module.css";
 
 const links = ["Bio", "Projects"];
 
 function Header({ language, setLanguage }) {
     console.log(language);
     return (
-        <header className="mx-auto mb-28 flex w-3/4 items-center justify-between pt-14">
-            <img src={logo} alt="logo" className="h-7 w-20" />
-            <ul className="flex gap-8">
+        <header className="mx-auto mb-[60px] flex items-center justify-between px-32 pt-14 sm:mb-[90px] lg:mb-[120px]">
+            <img src={logo} alt="logo" className="h-8 w-20" />
+            <ul className="hidden gap-8 md:flex">
                 {links.map((l) => (
                     <li className="text-link-inactive hover:brightness-90">
                         <a href="">{l}</a>
                     </li>
                 ))}
             </ul>
-            <ul className="flex items-center justify-center text-sm gap-4">
+            <ul className="flex items-center justify-center gap-4 text-sm">
                 <li
                     className={
                         language === "en"
@@ -26,7 +25,7 @@ function Header({ language, setLanguage }) {
                 >
                     ENG
                 </li>
-                <div className='separator'></div>
+                <div className="separator"></div>
                 <li
                     className={
                         language === "en"

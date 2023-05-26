@@ -6,13 +6,14 @@ import linkedin from "../assets/linkedin.svg";
 import styles from "./Hero.module.css";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
+import hero from "../assets/hero.jpg";
 
 function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className={styles.hero}>
-            <div className={styles.heroImg}></div>
+        <div className="flex items-center justify-between px-32">
+            <img src={hero} alt="hero" className="h-64 w-64 object-cover sm:w-127 sm:h-127" />
             <div className={styles.heroInfo}>
                 <h1>Gustavo Priebe</h1>
                 <h3>
@@ -30,7 +31,7 @@ function Hero({ language }) {
                     <Button
                         onClick={() => setModal(!modal)}
                         // className="contact"
-                        class="py-1 px-3 text-white rounded bg-indigo-700 hover:bg-transparent hover:border-indigo-700 hover:outline hover:text-indigo-700 hover:text-md
+                        class="hover:text-md rounded bg-indigo-700 py-1 px-3 text-white hover:border-indigo-700 hover:bg-transparent hover:text-indigo-700 hover:outline
                         "
                     >
                         {language === "en" ? "Contact me" : "Contato"}
