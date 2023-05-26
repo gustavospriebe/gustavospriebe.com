@@ -129,7 +129,7 @@ export default function ModalEnglish({ modal, setModal }) {
             {toast === "send" && (
                 <Alert color="success" rounded>
                     <p>
-                        <span className="font-medium">Sucess! </span>
+                        <span className="font-medium">Success! </span>
                         Your message was sent.
                     </p>
                 </Alert>
