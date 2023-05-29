@@ -1,6 +1,5 @@
-import { Button } from "flowbite-react";
 import { useState } from "react";
-import dribble from "../assets/dribble.svg";
+import devto from "../assets/devto.svg";
 import github from "../assets/github.svg";
 import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
@@ -11,7 +10,7 @@ function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="xl:pt-22 xl:gap-30 xl:pt-18 lg:pt-18 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 2xl:gap-60 2xl:pt-40">
+        <div className="xl:gap-30 xl:pt-18 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-24 xl:pt-32 2xl:gap-60 2xl:pt-40">
             <img
                 src={hero}
                 alt="hero"
@@ -27,10 +26,8 @@ function Hero({ language }) {
                         : "Desenvolvedor Front End"}
                 </h3>
 
-                {/* <h4>
-                    {language === "en"
-                        ? "I'm a experienced "
-                        : "Desenvolvedor"}
+                {/* <h4 className="mb-7 w-full text-lg text-whiter">
+                    {language === "en" ? "I'm a experienced " : "Desenvolvedor"}
                 </h4> */}
                 <div className="flex w-full flex-col items-center lg:flex-row lg:gap-10">
                     <button
@@ -60,11 +57,11 @@ function Hero({ language }) {
                             <img src={github} alt="" />
                         </a>
                         <a
-                            href="https://dribbble.com/gustavospriebe"
+                            href="https://dev.to/gustavospriebe"
                             target="_blank"
                             className="hover-brightness"
                         >
-                            <img src={dribble} alt="" />
+                            <img src={devto} alt="" />
                         </a>
                     </div>
                 </div>

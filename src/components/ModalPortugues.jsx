@@ -23,13 +23,13 @@ export default function ModalEnglish({ modal, setModal }) {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
+                    // console.log(result.text);
                     setToast("send");
                     form.current.reset();
                     setLoading(false);
                 },
                 (error) => {
-                    console.log(error.text);
+                    // console.log(error.text);
                     setToast("error");
                     setLoading(false);
                 }
