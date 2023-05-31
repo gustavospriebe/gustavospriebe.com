@@ -1,6 +1,6 @@
 import logo from "../assets/logosvg.svg";
 
-const links = ["Bio", "Projects"];
+const links = ["Bio", "Blog", "Projects"];
 
 function Header({ language, setLanguage }) {
     return (

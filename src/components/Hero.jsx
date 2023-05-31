@@ -1,7 +1,6 @@
 import { useState } from "react";
-import devto from "../assets/devto.svg";
-import medium from "../assets/medium.svg";
 import github from "../assets/github.svg";
+import dribble from "../assets/dribble.svg";
 import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
 import twitter from "../assets/twitter.svg";
@@ -58,23 +57,13 @@ function Hero({ language }) {
                         >
                             <img src={github} alt="" />
                         </a>
-                        {language === "en" ? (
-                            <a
-                                href="https://medium.com/@gustavospriebe"
-                                target="_blank"
-                                className="hover-brightness"
-                            >
-                                <img src={medium} alt="" />
-                            </a>
-                        ) : (
-                            <a
-                                href="https://dev.to/gustavospriebe"
-                                target="_blank"
-                                className="hover-brightness"
-                            >
-                                <img src={devto} alt="" />
-                            </a>
-                        )}
+                        <a
+                            href="https://dribbble.com/gustavospriebe"
+                            target="_blank"
+                            className="hover-brightness"
+                        >
+                            <img src={dribble} alt="" />
+                        </a>
                         <a
                             href="https://twitter.com/gustavospriebe"
                             target="_blank"
