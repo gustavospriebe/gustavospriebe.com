@@ -4,7 +4,7 @@ const links = ["Bio", "Projects"];
 
 function Header({ language, setLanguage }) {
     return (
-        <header className="mx-auto flex items-center justify-between px-12 pt-6 sm:px-20 lg:px-20 xl:px-32 2xl:px-48 ">
+        <header className="mx-auto flex items-center justify-between px-12 pt-6 sm:px-20 lg:px-20 xl:px-32 2xl:px-48">
             <img src={logo} alt="logo" className="h-8 w-20" />
             {/* <ul className="hidden gap-8 md:flex">
                 {links.map((l) => (
@@ -13,7 +13,7 @@ function Header({ language, setLanguage }) {
                     </li>
                 ))}
             </ul> */}
-            <ul className="flex items-center justify-center gap-2 text-sm lg:gap-4 ">
+            <ul className="flex items-center justify-center gap-2 text-sm lg:gap-3 ">
                 <li
                     className={
                         language === "en"
