@@ -12,7 +12,9 @@ module.exports = {
                 "link-inactive": "rgba(156, 163, 175, 1)",
                 separator: "rgba(55, 65, 81, 1)",
                 background: "rgba(31, 42, 55, 1)",
-                header3: "rgba(110, 120, 220, .8)",
+                header3: "#4d50f9",
+                // header3: "#61e538",
+                // header3: "rgba(110, 120, 220, .8)",
                 whiter: "#f3f4f6",
             },
             fontFamily: {
