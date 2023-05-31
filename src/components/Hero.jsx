@@ -3,6 +3,7 @@ import devto from "../assets/devto.svg";
 import github from "../assets/github.svg";
 import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
+import twitter from "../assets/twitter.svg";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 
@@ -10,7 +11,7 @@ function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="xl:gap-30 xl:pt-18 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-24 xl:pt-32 2xl:gap-60 2xl:pt-40">
+        <div className="xl:gap-30 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-24 xl:pt-16 2xl:gap-60 2xl:pt-40">
             <img
                 src={hero}
                 alt="hero"
@@ -29,7 +30,7 @@ function Hero({ language }) {
                 {/* <h4 className="mb-7 w-full text-lg text-whiter">
                     {language === "en" ? "I'm a experienced " : "Desenvolvedor"}
                 </h4> */}
-                <div className="flex w-full flex-col items-center lg:flex-row lg:gap-10">
+                <div className="flex w-full flex-col items-center lg:flex-row lg:gap-8">
                     <button
                         onClick={() => setModal(!modal)}
                         className="button sm:text-lg"
@@ -41,7 +42,7 @@ function Hero({ language }) {
                     ) : (
                         <ModalPortuguese modal={modal} setModal={setModal} />
                     )}
-                    <div className="flex items-center justify-center gap-6">
+                    <div className="flex items-center justify-center gap-5">
                         <a
                             href="https://www.linkedin.com/in/gustavospriebe/"
                             target="_blank"
@@ -62,6 +63,13 @@ function Hero({ language }) {
                             className="hover-brightness"
                         >
                             <img src={devto} alt="" />
+                        </a>
+                        <a
+                            href="https://twitter.com/gustavospriebe"
+                            target="_blank"
+                            className="hover-brightness"
+                        >
+                            <img src={twitter} alt="" />
                         </a>
                     </div>
                 </div>

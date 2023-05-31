@@ -3,17 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --language-active: rgba(104, 117, 245, 1);
-    --language-inactive: rgba(180, 198, 252, 1);
-    --separator: rgba(55, 65, 81, 1);
-    --link-active: rgba(229, 231, 235, 1);
-    --link-inactive: rgba(156, 163, 175, 1);
-}
-
 @layer base {
     .language-active {
-        @apply hover-brightness cursor-pointer text-language-active;
+        @apply hover-brightness cursor-pointer text-header3;
     }
 
     .language-inactive {
@@ -25,9 +17,9 @@
     }
 
     .separator {
+        @apply border-separator border;
         width: 20px;
         height: 0px;
-        border: 1px solid var(--separator);
         transform: rotate(90deg);
     }
 
