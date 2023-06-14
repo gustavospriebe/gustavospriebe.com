@@ -11,7 +11,7 @@ function Hero({ language }) {
     const [modal, setModal] = useState(false);
 
     return (
-        <div className="xl:gap-30 flex flex-col items-center justify-center pt-12 lg:flex-row lg:gap-14 lg:pt-24 xl:pt-16 2xl:gap-60 2xl:pt-40">
+        <div className="xl:gap-30 flex flex-col items-center justify-center p-12 lg:flex-row lg:gap-14 lg:p-24 xl:p-16 2xl:gap-60 2xl:p-40">
             <img
                 src={hero}
                 alt="hero"
