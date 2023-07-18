@@ -1,10 +1,10 @@
 import { useState } from "react";
 import devto from "../assets/devto.svg";
+import dribble from "../assets/dribble.svg";
 import github from "../assets/github.svg";
 import hero from "../assets/hero.jpg";
 import linkedin from "../assets/linkedin.svg";
 import medium from "../assets/medium.svg";
-import twitter from "../assets/twitter.svg";
 import ModalEnglish from "./ModalEnglish";
 import ModalPortuguese from "./ModalPortugues";
 
@@ -76,11 +76,11 @@ function Hero({ language }) {
                             </a>
                         )}
                         <a
-                            href="https://twitter.com/gustavospriebe"
+                            href="https://dribbble.com/gustavospriebe"
                             target="_blank"
                             className="hover-brightness"
                         >
-                            <img src={twitter} alt="" />
+                            <img src={dribble} alt="" />
                         </a>
                     </div>
                 </div>
