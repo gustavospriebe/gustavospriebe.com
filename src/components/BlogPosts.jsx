@@ -1,7 +1,3 @@
-
-
 export function BlogPosts() {
-  return (
-    <div>BlogPosts</div>
-  )
+  return <div>BlogPosts</div>;
 }

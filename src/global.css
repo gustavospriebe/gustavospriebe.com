@@ -4,43 +4,43 @@
 @tailwind utilities;
 
 @layer base {
-    .language-active {
-        @apply hover-brightness cursor-pointer text-header3;
-    }
+  .language-active {
+    @apply hover-brightness cursor-pointer text-header3;
+  }
 
-    .language-inactive {
-        @apply hover-brightness cursor-pointer text-language-inactive;
-    }
+  .language-inactive {
+    @apply hover-brightness cursor-pointer text-language-inactive;
+  }
 
-    .hover-brightness {
-        @apply transition-all hover:brightness-75;
-    }
+  .hover-brightness {
+    @apply transition-all hover:brightness-75;
+  }
 
-    .separator {
-        @apply border-separator border;
-        width: 20px;
-        height: 0px;
-        transform: rotate(90deg);
-    }
+  .separator {
+    @apply border border-separator;
+    width: 20px;
+    height: 0px;
+    transform: rotate(90deg);
+  }
 
-    .hero-animation {
-        box-shadow: 0px 9px 25px 4px rgba(141, 141, 141, 0.25);
-        animation: profile__animate 8s ease-in-out infinite 1s;
-    }
+  .hero-animation {
+    box-shadow: 0px 9px 25px 4px rgba(141, 141, 141, 0.25);
+    animation: profile__animate 8s ease-in-out infinite 1s;
+  }
 
-    @keyframes profile__animate {
-        0% {
-            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-        }
-        50% {
-            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-        }
-        100% {
-            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-        }
+  @keyframes profile__animate {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
 
-    .button {
-        @apply mb-6 h-12 w-52 rounded-lg bg-header3 font-semibold text-whiter transition hover:border-header3 hover:bg-transparent hover:text-header3 hover:outline  lg:mb-0;
-    }
+  .button {
+    @apply mb-6 h-12 w-52 rounded-lg bg-header3 font-semibold text-whiter transition hover:border-header3 hover:bg-transparent hover:text-header3 hover:outline  lg:mb-0;
+  }
 }
