@@ -18,7 +18,7 @@ function App() {
   const [language, setLanguage] = useState("pt-br");
 
   return (
-    <div className="min-h-screen bg-background font-inter">
+    <div className="min-h-screen bg-background font-inter pb-10">
       <Header language={language} setLanguage={setLanguage} />
       <Hero language={language} />
     </div>

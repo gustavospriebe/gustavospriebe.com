@@ -12,7 +12,7 @@ function Hero({ language }) {
   const [modal, setModal] = useState(false);
 
   return (
-    <div className="xl:gap-30 flex flex-col items-center justify-center p-12 lg:flex-row lg:gap-14 lg:p-24 xl:p-16 2xl:gap-60 2xl:p-40">
+    <div className="lg:mt-30 mt-20 flex flex-col items-center justify-center lg:flex-row lg:gap-20 lg:px-20 xl:px-32 2xl:gap-40 2xl:px-48">
       <img
         src={hero}
         alt="hero"
