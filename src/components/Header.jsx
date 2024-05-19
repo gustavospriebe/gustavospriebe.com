@@ -1,6 +1,6 @@
-import logo from "../assets/logosvg.svg";
+import logo from "../assets/logosvg.svg"
 
-const links = ["Bio", "Blog", "Projects"];
+const links = ["Bio", "Blog", "Projects"]
 
 function Header({ language, setLanguage }) {
   return (
@@ -33,7 +33,7 @@ function Header({ language, setLanguage }) {
         </li>
       </ul>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
